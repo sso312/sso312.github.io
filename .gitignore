@@ -1,3 +1,7 @@
+[submodule "blog"]
+    path = blog
+    url = https://github.com/sso312/sso312.github.io.git
+
 _site/
 .jekyll-cache/
 .htaccess
