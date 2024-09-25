@@ -1,6 +1,6 @@
 [submodule "blog"]
     path = blog
-    url = https://github.com/sso312/sso312.github.io.git
+    url = https://sso312.github.io/
 
 _site/
 .jekyll-cache/
