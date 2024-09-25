@@ -1,3 +1,3 @@
-[submodule "git_blog"]
-    path = git_blog
+[submodule "blog"]
+    path = blog
     url = https://github.com/sso312/sso312.github.io.git
