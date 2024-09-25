@@ -1,13 +1,4 @@
 [submodule "blog"]
     path = blog
-    url = https://sso312.github.io/
-
-_site/
-.jekyll-cache/
-.htaccess
-_config.yml
-.DS_Store
-.sass-cache
-.jekyll-metadata
-vendor
+    url = https://github.com/sso312/sso312.github.io.git
 
