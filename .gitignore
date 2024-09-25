@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 _site/
 .jekyll-cache/
 .htaccess
 _config.yml
 .DS_Store
-=======
-_site
 .sass-cache
-.jekyll-cache
 .jekyll-metadata
 vendor
->>>>>>> 42817c488df7371e230f37007181ee49173fbcae
+
