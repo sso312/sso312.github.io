@@ -48,7 +48,6 @@
 - name: Azure Automation Scripts
   gh_user: tzuehlke
   repo: scripts
-  #img: https://upload.wikimedia.org/wikipedia/commons/2/2f/PowerShell_5.0_icon.png
   img: https://docs.microsoft.com/de-de/powershell/media/index/ps_black_128.svg
   desc: Some scripts that I used with Azure Automation. For example a VM Start/Stop script or a script for resetting a VPN tunnel.
 
