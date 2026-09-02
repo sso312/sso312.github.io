@@ -201,6 +201,132 @@
     }
   }
 
+  .landing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-height: calc(100vh - 9rem);
+    padding: 5.5rem 1.25rem 3rem;
+    text-align: center;
+  }
+
+  .landing__profile {
+    width: min(100%, 430px);
+    animation: landing-enter 0.5s ease both;
+  }
+
+  .landing__avatar {
+    display: block;
+    width: min(76vw, 340px);
+    height: min(76vw, 340px);
+    margin: 0 auto 1.7rem;
+    border: 0;
+    border-radius: 50%;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .landing__name {
+    margin: 0 0 1.5rem;
+    font-size: clamp(1.55rem, 5vw, 2rem);
+    font-weight: 500;
+  }
+
+  .landing__name span {
+    margin-right: 0.35rem;
+    font-size: 0.75em;
+  }
+
+  .landing__roles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.65rem 1.6rem;
+    margin-bottom: 3rem;
+    font-size: 1rem;
+  }
+
+  .landing__roles span span {
+    margin-right: 0.3rem;
+    color: #8267c7;
+    font-weight: 700;
+  }
+
+  .landing__message {
+    margin: 0 auto 3rem;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .landing__emoji {
+    display: block;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.25rem;
+  }
+
+  .landing__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.45rem 1.2rem;
+    font-size: 0.85rem;
+  }
+
+  .landing__links a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+
+  .landing__links a:hover,
+  .landing__links a:focus-visible {
+    color: #ff6c02;
+    border-bottom-color: currentColor;
+  }
+
+  html[data-theme="dark"] .landing__avatar {
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
+  }
+
+  html[data-theme="dark"] .landing__roles span span {
+    color: #bca7f2;
+  }
+
+  html[data-theme="dark"] .landing__links a {
+    color: #e6e6e6;
+  }
+
+  @keyframes landing-enter {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .landing {
+      min-height: calc(100vh - 7rem);
+      padding-top: 4.75rem;
+    }
+
+    .landing__roles,
+    .landing__message {
+      margin-bottom: 2.2rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .landing__profile {
+      animation: none;
+    }
+  }
+
   /* Code-copy control shared by every post and page. */
   .code-block-wrapper {
     position: relative !important;

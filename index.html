@@ -1,6 +1,35 @@
 ---
-layout: home
-author_profile: true
-sidebar:
-    nav: "categories"
+layout: default
+title: "Home"
 ---
+
+<main class="landing" aria-labelledby="landing-title">
+  <div class="landing__profile">
+    <img
+      class="landing__avatar"
+      src="https://github.com/sso312.png"
+      alt="sso312 프로필 이미지"
+      width="360"
+      height="360"
+      referrerpolicy="no-referrer"
+    >
+
+    <h1 id="landing-title" class="landing__name"><span aria-hidden="true">🧑🏻‍💻</span> sso312</h1>
+
+    <div class="landing__roles" aria-label="전문 분야">
+      <span><span aria-hidden="true">✔</span> Oracle DBA</span>
+      <span><span aria-hidden="true">✔</span> DB Engineer</span>
+    </div>
+
+    <p class="landing__message">
+      <span class="landing__emoji" aria-hidden="true">🚀 ☁️ ✨</span>
+      기록하고, 배우고, 성장합니다.
+    </p>
+
+    <nav class="landing__links" aria-label="바로가기">
+      <a href="{{ '/categories/' | relative_url }}">게시글 보기</a>
+      <a href="{{ '/about/' | relative_url }}">About</a>
+      <a href="https://github.com/sso312" rel="noopener noreferrer">GitHub</a>
+    </nav>
+  </div>
+</main>
