@@ -27,7 +27,7 @@
   }
 
   function getWrapper(pre) {
-    var highlighted = pre.closest("div.highlighter-rouge, figure.highlight");
+    var highlighted = pre.closest("div.highlight, div.highlighter-rouge, figure.highlight");
     if (highlighted) return highlighted;
 
     var wrapper = document.createElement("div");
@@ -41,7 +41,7 @@
     if (pre.closest(".rouge-gutter")) return;
 
     var wrapper = getWrapper(pre);
-    if (wrapper.querySelector(":scope > .code-copy-button")) return;
+    if (wrapper.getElementsByClassName("code-copy-button").length) return;
 
     wrapper.classList.add("code-block-wrapper");
 
@@ -81,6 +81,6 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".page__content pre").forEach(addCopyButton);
+    document.querySelectorAll("pre").forEach(addCopyButton);
   });
 })();
