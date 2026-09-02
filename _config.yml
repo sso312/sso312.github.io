@@ -1,49 +1,85 @@
 title: "sso312.com"
-description: "DBA / DB Engineer"
-logo_img: "/assets/img/favicon.webp"
-profile_img: "/assets/img/cat.jpg"
+description: "Oracle DBA / DB Engineer"
+url: "https://sso312.github.io"
+baseurl: ""
 
-# Social Links
-email: "sohpark312@gmail.com"
-github_username: "sso312"
-linkedin_username: "linkedin"
+# Just the Docs
+remote_theme: just-the-docs/just-the-docs@v0.12.0
+color_scheme: light
+search_enabled: true
+heading_anchors: true
+enable_copy_code_button: true
+back_to_top: true
+back_to_top_text: "맨 위로"
+nav_sort: case_insensitive
 
-# External API
+aux_links:
+  "GitHub":
+    - "https://github.com/sso312"
+aux_links_new_tab: true
+
+footer_content: "Oracle DBA와 DB Engineer 학습 기록"
+
+# 기존 Giscus 댓글 연결 정보
 giscus_repo: "sso312/sso312.github.io"
-giscus_repoId: "R_kgDOSdCRwA"
+giscus_repo_id: "R_kgDOSdCRwA"
 giscus_category: "Q&A"
-giscus_categoryId: "DIC_kwDOSdCRwM4C9A_q"
-goatcounter_code:
-google_analytics:
+giscus_category_id: "DIC_kwDOSdCRwM4C9A_q"
 
-# If your repo name follows the format "<user-name>.github.io", then leave the below blank.
-# Otherwise, set its value as "/<repo-name>". ex) baseurl: /myblog
-baseurl:
+gh_edit_link: true
+gh_edit_link_text: "GitHub에서 이 페이지 수정"
+gh_edit_repository: "https://github.com/sso312/sso312.github.io"
+gh_edit_branch: "master"
+gh_edit_view_mode: "edit"
 
-# Build settings
 plugins:
-  - jekyll-feed
-  - jekyll-sitemap
+  - jekyll-remote-theme
+  - jekyll-include-cache
   - jekyll-seo-tag
-  - jekyll-loading-lazy
+  - jekyll-sitemap
 
 exclude:
-  - docs/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
 
+# 기존 글의 주소(/Oracle/...)를 유지하기 위한 콘텐츠 컬렉션
 collections:
   pages:
     output: true
     permalink: /:path.html
+
+just_the_docs:
+  collections:
+    pages:
+      name: "문서"
 
 defaults:
   - scope:
       path: ""
       type: "pages"
     values:
-      layout: "page"
-      date: "1900-01-01"
+      layout: default
 
-# Markdown newline activator
+  - scope:
+      path: "_pages/Oracle/Flashback"
+      type: "pages"
+    values:
+      parent: "Flashback"
+  - scope:
+      path: "_pages/Oracle/설치"
+      type: "pages"
+    values:
+      parent: "설치"
+  - scope:
+      path: "_pages/Oracle/오류"
+      type: "pages"
+    values:
+      parent: "오류"
+
 kramdown:
   input: GFM
   hard_wrap: true
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
