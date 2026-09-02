@@ -20,12 +20,6 @@ aux_links_new_tab: true
 
 footer_content: "Oracle DBA와 DB Engineer 학습 기록"
 
-# 기존 Giscus 댓글 연결 정보
-giscus_repo: "sso312/sso312.github.io"
-giscus_repo_id: "R_kgDOSdCRwA"
-giscus_category: "Q&A"
-giscus_category_id: "DIC_kwDOSdCRwM4C9A_q"
-
 gh_edit_link: true
 gh_edit_link_text: "GitHub에서 이 페이지 수정"
 gh_edit_repository: "https://github.com/sso312/sso312.github.io"
