@@ -1,79 +1,122 @@
+minimal_mistakes_skin: "plum"
+
+locale: "ko-KR"
 title: "sso312.com"
+title_separator: "&#124;"
+name: "sso312"
 description: "Oracle DBA / DB Engineer"
 url: "https://sso312.github.io"
 baseurl: ""
+repository: "sso312/sso312.github.io"
+search: true
+search_full_content: true
 
-# Just the Docs
-remote_theme: just-the-docs/just-the-docs@v0.12.0
-color_scheme: light
-search_enabled: true
-heading_anchors: true
-enable_copy_code_button: true
-back_to_top: true
-back_to_top_text: "맨 위로"
-nav_sort: case_insensitive
+# 댓글 기능은 사용하지 않는다.
+comments:
+  provider: false
 
-aux_links:
-  "GitHub":
-    - "https://github.com/sso312"
-aux_links_new_tab: true
+author:
+  name: "sso312"
+  bio: "Oracle DBA / DB Engineer"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/sso312"
 
-footer_content: "Oracle DBA와 DB Engineer 학습 기록"
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/sso312"
 
-gh_edit_link: true
-gh_edit_link_text: "GitHub에서 이 페이지 수정"
-gh_edit_repository: "https://github.com/sso312/sso312.github.io"
-gh_edit_branch: "master"
-gh_edit_view_mode: "edit"
-
-plugins:
-  - jekyll-remote-theme
-  - jekyll-include-cache
-  - jekyll-seo-tag
-  - jekyll-sitemap
+include:
+  - _pages
 
 exclude:
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - .github
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
   - Gemfile
   - Gemfile.lock
-  - vendor/
+  - LICENSE
+  - minimal-mistakes-jekyll.gemspec
+  - node_modules
+  - package.json
+  - Rakefile
+  - README.md
+  - screenshot-layouts.png
+  - screenshot.png
+  - staticman.yml
+  - vendor
 
-# 기존 글의 주소(/Oracle/...)를 유지하기 위한 콘텐츠 컬렉션
-collections:
-  pages:
-    output: true
-    permalink: /:path.html
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+markdown: kramdown
+highlighter: rouge
+excerpt_separator: "\n\n"
 
-just_the_docs:
-  collections:
-    pages:
-      name: "문서"
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+permalink: /:categories/:title/
+paginate: 5
+paginate_path: /page:num/
+timezone: "Asia/Seoul"
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-include-cache
+
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-include-cache
+
+category_archive:
+  type: liquid
+  path: /categories/
+
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
 
 defaults:
   - scope:
       path: ""
-      type: "pages"
+      type: posts
     values:
-      layout: default
-
+      layout: single
+      author_profile: true
+      show_date: true
+      comments: false
+      related: true
+      sidebar:
+        nav: "categories"
   - scope:
-      path: "_pages/Oracle/Flashback"
-      type: "pages"
+      path: ""
+      type: pages
     values:
-      parent: "Flashback"
-  - scope:
-      path: "_pages/Oracle/설치"
-      type: "pages"
-    values:
-      parent: "설치"
-  - scope:
-      path: "_pages/Oracle/오류"
-      type: "pages"
-    values:
-      parent: "오류"
-
-kramdown:
-  input: GFM
-  hard_wrap: true
-  syntax_highlighter_opts:
-    block:
-      line_numbers: false
+      layout: single
+      author_profile: true
+      comments: false
+      sidebar:
+        nav: "categories"
