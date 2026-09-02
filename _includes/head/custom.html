@@ -2,4 +2,74 @@
 
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 
+<style>
+  /* Code-copy control shared by every post and page. */
+  .code-block-wrapper {
+    position: relative !important;
+  }
+
+  .code-block-wrapper > .code-copy-button {
+    position: absolute !important;
+    top: 8px !important;
+    right: 8px !important;
+    left: auto !important;
+    z-index: 10 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 32px !important;
+    min-width: 32px !important;
+    height: 32px !important;
+    min-height: 32px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 1px solid #444 !important;
+    border-radius: 8px !important;
+    color: #b4b4b4 !important;
+    background: #2f2f2f !important;
+    box-shadow: none !important;
+    cursor: pointer !important;
+    opacity: 0 !important;
+    transform: none !important;
+    transition: opacity 0.15s ease, color 0.15s ease, background-color 0.15s ease !important;
+  }
+
+  .code-block-wrapper:hover > .code-copy-button,
+  .code-block-wrapper:focus-within > .code-copy-button,
+  .code-block-wrapper > .code-copy-button.is-copied {
+    opacity: 1 !important;
+  }
+
+  .code-block-wrapper > .code-copy-button:hover {
+    color: #fff !important;
+    background: #3b3b3b !important;
+  }
+
+  .code-block-wrapper > .code-copy-button:focus-visible {
+    outline: 2px solid #6ea8fe !important;
+    outline-offset: 2px !important;
+  }
+
+  .code-block-wrapper > .code-copy-button.is-copied {
+    color: #8ee6b7 !important;
+  }
+
+  .code-block-wrapper > .code-copy-button svg {
+    display: block !important;
+    width: 16px !important;
+    height: 16px !important;
+    fill: none !important;
+    stroke: currentColor !important;
+    stroke-width: 1.7 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+  }
+
+  @media (hover: none) {
+    .code-block-wrapper > .code-copy-button {
+      opacity: 0.9 !important;
+    }
+  }
+</style>
+
 <!-- end custom head snippets -->

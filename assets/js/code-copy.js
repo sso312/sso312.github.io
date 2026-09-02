@@ -2,9 +2,9 @@
   "use strict";
 
   var copyIcon =
-    '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"/></svg>';
+    '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="13" rx="2"></rect><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h3"></path></svg>';
   var checkIcon =
-    '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>';
+    '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"></path></svg>';
 
   function fallbackCopy(text) {
     var textarea = document.createElement("textarea");
@@ -50,7 +50,7 @@
     button.className = "code-copy-button";
     button.setAttribute("aria-label", "코드 복사");
     button.setAttribute("title", "코드 복사");
-    button.innerHTML = copyIcon + "<span>복사</span>";
+    button.innerHTML = copyIcon;
 
     button.addEventListener("click", function () {
       var code = pre.querySelector("code");
@@ -60,17 +60,20 @@
         .then(function () {
           button.classList.add("is-copied");
           button.setAttribute("aria-label", "코드가 복사됨");
-          button.innerHTML = checkIcon + "<span>복사됨!</span>";
+          button.title = "복사됨!";
+          button.innerHTML = checkIcon;
 
           window.setTimeout(function () {
             button.classList.remove("is-copied");
             button.setAttribute("aria-label", "코드 복사");
-            button.innerHTML = copyIcon + "<span>복사</span>";
+            button.title = "코드 복사";
+            button.innerHTML = copyIcon;
           }, 1800);
         })
         .catch(function () {
           button.setAttribute("aria-label", "코드 복사 실패");
-          button.innerHTML = copyIcon + "<span>복사 실패</span>";
+          button.title = "복사 실패";
+          button.innerHTML = copyIcon;
         });
     });
 
