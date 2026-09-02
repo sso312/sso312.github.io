@@ -1,0 +1,20 @@
+main:
+  - title: "Home"
+    url: /
+  - title: "Categories"
+    url: /categories/
+  - title: "About"
+    url: /about/
+  - title: "GitHub"
+    url: https://github.com/sso312
+
+categories:
+  - title: "Oracle"
+    url: /categories/oracle/
+    children:
+      - title: "Flashback"
+        url: /categories/flashback/
+      - title: "설치"
+        url: /categories/설치/
+      - title: "오류"
+        url: /categories/오류/

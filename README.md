@@ -1,6 +1,8 @@
 # sso312.github.io
 
-Oracle DBA와 DB Engineer 학습 기록을 위한 GitHub Pages 사이트입니다.
+Oracle DBA와 DB Engineer 학습 기록을 위한 GitHub Pages 블로그입니다.
+
+이 사이트는 [minimal-mistakes-choiiis-customized](https://github.com/choiiis/minimal-mistakes-choiiis-customized) 테마를 기반으로 합니다.
 
 ## 로컬 실행
 
@@ -8,6 +10,3 @@ Oracle DBA와 DB Engineer 학습 기록을 위한 GitHub Pages 사이트입니�
 bundle install
 bundle exec jekyll serve
 ```
-
-사이트는 Just the Docs 테마를 사용합니다.
-
